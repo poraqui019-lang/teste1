@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#4f46e5" />
+  <title>LifeOS — sua vida, em harmonia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="LifeOS, início"><span class="brand-mark"><span class="life-dot"></span><span class="life-smile"></span></span><span>Life<span>OS</span></span></a>
+      <nav class="nav" aria-label="Navegação principal">
+        <button class="nav-item active" data-view="home"><i>⌂</i><span data-i18n="home">Hoje</span></button>
+        <button class="nav-item" data-view="finance"><i>◈</i><span data-i18n="finance">Finanças</span></button>
+        <button class="nav-item" data-view="food"><i>◐</i><span data-i18n="food">Alimentação</span></button>
+        <button class="nav-item" data-view="workouts"><i>⌁</i><span data-i18n="workouts">Treinos</span></button>
+        <button class="nav-item" data-view="calendar"><i>□</i><span data-i18n="calendar">Compromissos</span></button>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="nav-item" data-view="settings"><i>⚙</i><span data-i18n="settings">Ajustes</span></button>
+        <div class="profile"><span class="avatar">AM</span><div><b>Ana Martins</b><small>Seu espaço pessoal</small></div></div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <header class="topbar"><div><p class="eyebrow" id="todayLabel">QUARTA-FEIRA, 16 DE JULHO</p><h1 id="viewTitle">Bom dia, Ana <span>✦</span></h1></div><div class="top-actions"><button class="icon-btn" id="themeToggle" aria-label="Alternar tema">☾</button><button class="avatar notification" aria-label="Notificações">●</button></div></header>
+      <div id="pageContent"></div>
+    </section>
+  </main>
+  <nav class="mobile-nav" aria-label="Navegação móvel">
+    <button class="active" data-view="home">⌂<small>Hoje</small></button><button data-view="finance">◈<small>Finanças</small></button><button data-view="food">◐<small>Alimentação</small></button><button data-view="workouts">⌁<small>Treino</small></button><button data-view="calendar">□<small>Agenda</small></button>
+  </nav>
+  <button class="fab" id="quickAdd" aria-label="Adicionar">+</button>
+  <dialog id="entryDialog"><form method="dialog" id="entryForm"><div class="modal-head"><div><p class="eyebrow" id="modalKicker">NOVO REGISTRO</p><h2 id="modalTitle">Adicionar</h2></div><button value="cancel" class="close">×</button></div><div id="formFields"></div><div class="modal-actions"><button value="cancel" class="btn ghost">Cancelar</button><button type="submit" class="btn primary">Salvar</button></div></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
